@@ -1,5 +1,3 @@
-# My Project
-This is my project.
+# Goal
 
-## This is my work.
-Thing.
+Setting up this repo to track my personal 100 Days of Code Python project.
