@@ -7,4 +7,4 @@
 
 
 #One line
-print(int((float(input("enter your weight in kg: ")) / float(input("enter your height in m: ")) ** 2)))
+print(int(float(input("enter your weight in kg: ")) / float(input("enter your height in m: ")) ** 2))
