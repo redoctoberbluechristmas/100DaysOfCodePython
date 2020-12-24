@@ -3,6 +3,7 @@ size = input("What size pizza do you want? S, M, or L ")
 add_pepperoni = input("Do you want pepperoni? Y or N ")
 extra_cheese = input("Do you want extra cheese? Y or N ")
 
+#Create a variable to host the running total.
 cost = 0
 
 # Ask size; $15 for small, $20 for medium, $25 for large.
