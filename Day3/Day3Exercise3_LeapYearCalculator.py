@@ -21,7 +21,8 @@ else:
 
 #"If a year is divisible by 4, and it is either not divisible by 100, or is not not divisible by 100 but is 
 # divisible by 400, then it is a leap year. Otherwise, it is not a leap year."
-if(year % 4 == 0) and ((year % 100 != 0) or (year % 400 == 0)):
+if(year % 4 == 0) and ((not year % 100 == 0) or (year % 400 == 0)):
+#if(year % 4 == 0) and ((year % 100 != 0) or (year % 400 == 0)):
   print("Leap year.")
 else:
   print("Not leap year.")
