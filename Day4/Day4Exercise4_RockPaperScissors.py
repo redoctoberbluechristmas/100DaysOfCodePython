@@ -29,6 +29,8 @@ import random
 
 player_choice = input("What do you choose? Rock, paper, or scissors?  ").lower()
 
+print(player_choice)
+
 if player_choice.startswith("r"):
   player_choice = 0
   print("You chose rock.")
