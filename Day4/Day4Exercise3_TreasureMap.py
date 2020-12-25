@@ -12,9 +12,12 @@ position = input("Where do you want to put the treasure? ")
 # Convert string input into simple, 2 index list.
 inputindices = list(position)
 
-# Cast input to int, so can be referenced in map below.
-row_coord = int(inputindices[0])
-column_coord = int(inputindices[1])
+# Cast input to int, so can be referenced in map below. 
+# Updated with -1, so the input could follow the more natural 
+# "Row 1, Column 1 is upper left corner" pattern,
+# as opposed to starting with 0s. 
+row_coord = (int(inputindices[0]) - 1)
+column_coord = (int(inputindices[1]) -1)
 
 #Logging.
 print(f"{row_coord} is row.")
