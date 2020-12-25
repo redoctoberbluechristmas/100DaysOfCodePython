@@ -16,8 +16,8 @@ inputindices = list(position)
 # Updated with -1, so the input could follow the more natural 
 # "Row 1, Column 1 is upper left corner" pattern,
 # as opposed to starting with 0s. 
-row_coord = (int(inputindices[0]) - 1)
-column_coord = (int(inputindices[1]) -1)
+column_coord = (int(inputindices[0]) -1)
+row_coord = (int(inputindices[1]) - 1)
 
 #Logging.
 print(f"{row_coord} is row.")
