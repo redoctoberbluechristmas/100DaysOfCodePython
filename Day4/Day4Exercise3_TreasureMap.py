@@ -9,6 +9,8 @@ position = input("Where do you want to put the treasure? ")
 
 #Write your code below this row 👇
 
+
+#Split a string's chars so that each char is an index of a list.
 inputindices = list(position)
 
 print(f"These are the {inputindices}")
