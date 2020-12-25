@@ -58,28 +58,11 @@ else:
   print(scissors)
 
 
-if(player_choice == 0):
-  if(computer_choice == 0):
-    print("Tie.")
-  elif(computer_choice == 1):
-    print("Computer wins.")
-  else:
-    print("Player wins.")
-
-
-if(player_choice == 1):
-  if(computer_choice == 0):
-    print("Player wins.")
-  elif(computer_choice == 1):
-    print("Tie.")
-  else:
-    print("Computer wins.")
-
-
-if (player_choice == 2):
-  if(computer_choice == 0):
-    print("Computer wins.")
-  elif(computer_choice == 1):
-    print("Player wins.")
-  else:
-    print("Tie.")
+if player_choice == 0 and computer_choice == 2:
+  print("You win!")
+elif player_choice > computer_choice:
+  print("You win!")
+elif player_choice == computer_choice:
+  print("You tie.")
+else:
+  print("Computer wins.")
