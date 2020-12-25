@@ -28,7 +28,7 @@ left_or_right = ((input('You\'re at a crossroads. Would you like to go "left" or
 
 # If left_or_right does not NOT (!= -1) contain "left", you turn left. If it comes back 0, you turn not left (or right)
 if(left_or_right != -1):
-  print("You turn left. You're a beach. There's an island in the distance, but it's pretty far and the water looks rough.")
+  print("You turn left. You're at a beach. There's an island in the distance, but it's pretty far and the water looks rough.")
   swim_or_wait = ((input("Would you like to swim across or wait?\n")).lower()).find("wait")
   if(swim_or_wait != -1):
     print("You decide to wait. Eventually, a boat appears and takes you to the island. On the island, you find a wall with three doors. One is red, one is yellow, and one is blue.")
