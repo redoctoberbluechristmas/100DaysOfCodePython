@@ -6,8 +6,9 @@ print(student_scores)
 # 🚨 Don't change the code above 👆
 
 #Write your code below this row 👇
-
-
+#Using max function
+# print(max(student_scores))
+#Not using max function
 high_score = 0
 
 for score in student_scores:
@@ -15,3 +16,7 @@ for score in student_scores:
     high_score = score
 
 print(f"Today's high score is: {high_score}")
+
+
+#Using max function
+# print(max(student_scores))
