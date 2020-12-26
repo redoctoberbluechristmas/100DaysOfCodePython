@@ -12,7 +12,7 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 # Easy version (letters, numbers, and symbols in fixed order.)
 
-password = ""
+password = []
 
 for i in range(0, nr_letters):
   password += random.choice(letters)
@@ -30,15 +30,15 @@ print(f"Your password is {password}")
 
 # Harder version (order of characters randomized)
 
-password_block = list(password)
+# password_block = list(password)
 
 
-print(f"This is the random password list: {password_block}")
+print(f"This is the random password list: {password}")
 
 random_password = ""
-random.shuffle(password_block)
+random.shuffle(password)
 
-for char in password_block:
+for char in password:
   random_password += char
 
 ### Tried to use this as well, but it's less elegant###
