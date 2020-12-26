@@ -30,9 +30,6 @@ print(f"Your password is {password}")
 
 # Harder version (order of characters randomized)
 
-# password_block = list(password)
-
-
 print(f"This is the random password list: {password}")
 
 random_password = ""
