@@ -10,10 +10,12 @@ for n in range(0, len(student_heights)):
 #Write your code below this row 👇
 
 height_total = 0
+index = 0
 
 for height in student_heights:
   height_total += height
-  print(height_total)
+  index += 1
 
-average_height = int(round(height_total / len(student_heights)))
+
+average_height = int(round(height_total / index))
 print(f"The average height of the class is {average_height}.")
