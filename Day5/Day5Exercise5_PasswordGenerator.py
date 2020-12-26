@@ -38,8 +38,7 @@ random.shuffle(password_block)
 for char in password_block:
   random_password += char
 
-### Tried to use this as well, but it's less elegant than  ###
+### Tried to use this as well, but it's less elegant###
 # random_password = ''.join(random.sample(password_block, len(password_block)))
-### USE THIS ABOVE ###
 
 print(f"This is your randomized password: {random_password}")
