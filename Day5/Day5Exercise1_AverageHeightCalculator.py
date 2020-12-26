@@ -15,5 +15,5 @@ for height in student_heights:
   height_total += height
   print(height_total)
 
-average_height = height_total / len(student_heights)
-print(f"The average height of the class is {int(average_height)}.")
+average_height = int(height_total / len(student_heights))
+print(f"The average height of the class is {average_height}.")
