@@ -21,6 +21,23 @@ def jump():
     move_right()
     move_left()
 
+
+# With while loop:
+
+# number_of_hurdles = 6
+# while number_of_hurdles > 0:
+#     jump()
+#     number_of_hurdles -= 1
+#     print(number_of_hurdles)
+
+
+# With a while loop with indefinite goal:
+
+# while at_goal() != True:
+# while at_goal() == False:
+# while not at_goal():
+#     jump()
+
 for i in range(6):
     jump()
     print(i)
