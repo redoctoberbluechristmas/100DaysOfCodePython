@@ -8,14 +8,24 @@ def turn_right():
 def jump():
     
     turn_left()
+    # I'm going to keep this in here to be instructive, but this resulted in an infinite loop that carried
+    # robot beyond the goal. Got stuck here.
+    # while wall_on_right():
+    #     if front_is_clear():
+    #         move()
+    #     else:
+    #         turn_left()
+    # turn_right()
+    # move()
+    # turn_right()
     while wall_on_right():
-        if front_is_clear():
-            move()
-        else:
-            turn_left()
+        move()
     turn_right()
     move()
     turn_right()
+    while front_is_clear():
+        move()
+    turn_left()
     
 while not at_goal():
     if front_is_clear():
