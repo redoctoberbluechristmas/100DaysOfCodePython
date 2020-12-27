@@ -1,4 +1,5 @@
-# Fuction to get robot to jump hurdles, here: https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Hurdle%201&url=worlds%2Ftutorial_en%2Fhurdle1.json
+# Script to get robot to jump hurdles, here: https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Hurdle%201&url=worlds%2Ftutorial_en%2Fhurdle1.json
+# Listen intended to teach functions.
 
 def turn_right():
     for i in range(0, 3):
