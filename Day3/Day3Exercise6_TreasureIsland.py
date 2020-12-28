@@ -24,15 +24,15 @@ print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.") 
 
 #This will convert input to lower, and look for anything like "left"
-left_or_right = ((input('You\'re at a crossroads. Would you like to go "left" or "right"?\n')).lower()).find("left")
+left_or_right = input('You\'re at a crossroads. Would you like to go "left" or "right"?\n').lower().find("left")
 
 # If left_or_right does not NOT (!= -1) contain "left", you turn left. If it comes back 0, you turn not left (or right)
 if(left_or_right != -1):
   print("You turn left. You're at a beach. There's an island in the distance, but it's pretty far and the water looks rough.")
-  swim_or_wait = ((input("Would you like to swim across or wait?\n")).lower()).find("wait")
+  swim_or_wait = input("Would you like to swim across or wait?\n").lower().find("wait")
   if(swim_or_wait != -1):
     print("You decide to wait. Eventually, a boat appears and takes you to the island. On the island, you find a wall with three doors. One is red, one is yellow, and one is blue.")
-    which_door = ((input("Which door do you choose? Red, Yellow, or Blue?\n")).lower()).find("yellow")
+    which_door = input("Which door do you choose? Red, Yellow, or Blue?\n").lower().find("yellow")
     if(which_door != -1):
       print("There is a treasure behind the yellow door. You win!")
     else:
