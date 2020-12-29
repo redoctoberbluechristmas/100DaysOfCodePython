@@ -23,6 +23,8 @@ end_of_game = False
 while not end_of_game:
     guess = input("Please guess a letter. ").lower()
 
+    # After you enter your guess, this will clear everything above, leaving only the output from below,
+    # until it loops around back to the input again.
     os.system('cls')
 
     if guess in previous_guesses:
