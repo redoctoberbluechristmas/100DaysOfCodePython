@@ -13,13 +13,13 @@ def caesar(input_text, shift_amount, code_direction):
             target_index = alphabet.index(char) + shift_amount
             if target_index > len(alphabet) - 1:
                 target_index = target_index - len(alphabet)
-            output_text += ''.join(alphabet[target_index])
+            output_text += alphabet[target_index]
         
         else:
             target_index = alphabet.index(char) - shift_amount
             if target_index < 0:
                 target_index = target_index + len(alphabet)
-            output_text += ''.join(alphabet[target_index])
+            output_text += alphabet[target_index]
     
     print(f"The {code_direction}d text is:\n{output_text}")
 
