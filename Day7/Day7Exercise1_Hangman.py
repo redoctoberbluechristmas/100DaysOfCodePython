@@ -2,6 +2,8 @@ import random
 from hangman_art import logo, stages
 from hangman_wordlist import word_list
 
+# If you do from <> import <>, the references are less verbose.
+# so, random.choice(word_list) vs. random.choice(hangman_wordlist.word_list)
 
 print(logo)
 
