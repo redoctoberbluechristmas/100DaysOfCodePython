@@ -1,50 +1,54 @@
 import random
-import Day7Exercise1_asciiart
-import Day7Exercise1_wordlist
+import hangman_art
+import hangman_wordlist
 
 
-print(Day7Exercise1_asciiart.logo)
+print(hangman_art.logo)
 
-chosen_word = list(random.choice(Day7Exercise1_wordlist.word_list))
+chosen_word = list(random.choice(hangman_wordlist.word_list))
 
 blanks_list = []
-for i in range(len(chosen_word)):
+for letter in chosen_word:
     blanks_list += "_"
 
-### Prompt player for letter ###
+lives = 6
+
+previous_guesses = []
 
 end_of_game = False
-
-lives = 6
 
 while not end_of_game:
     guess = input("Please guess a letter. ").lower()
 
-    for i in range(len(chosen_word)):
-        #letter = value at chosen_word[0], letter = value at chosen_word[1], etc.
-        letter = chosen_word[i]
-        if letter == guess:
-            blanks_list[i] = letter
+    if guess in previous_guesses:
+        print (f"You already chose that.\nSo far, you have chosen: {', '.join(previous_guesses)}.\n")
 
-    if guess not in chosen_word:
-        lives -= 1
-        print(f"You have {lives} lives left")
+    else:
+        for i in range(len(chosen_word)):
+            letter = chosen_word[i]
+            if letter == guess:
+                blanks_list[i] = letter
+                previous_guesses += guess
 
-    print(Day7Exercise1_asciiart.stages[lives])
+        if guess not in chosen_word:
+            lives -= 1
+            previous_guesses += guess
+            print(f"You have {lives} lives left")
 
-    blanks_list_string = ""
+        print(hangman_art.stages[lives])
 
-    # for i in blanks_list:
-    #     blanks_list_string += f" {i} "
+        blanks_list_string = ""
 
-    # print(f"The current panel is:\n {blanks_list_string}")
+        for i in blanks_list:
+            blanks_list_string += f" {i} "
 
-    print(f"{' '.join(blanks_list)}")
+        print(f"The current panel is:\n {blanks_list_string}")
 
-    if '_' not in blanks_list:
-        end_of_game = True
-        print("You win.")
+        if '_' not in blanks_list:
+            end_of_game = True
+            print("You win.")
 
-    if lives == 0:
-        end_of_game = True
-        print("You lose.")
+        if lives == 0:
+            end_of_game = True
+            print("You lose.")
+            print(f"The word was {chosen_word}")
