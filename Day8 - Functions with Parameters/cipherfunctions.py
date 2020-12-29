@@ -1,6 +1,5 @@
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-
 def caesar(input_text, shift_amount, code_direction):
 
     output_text = ""
@@ -8,6 +7,8 @@ def caesar(input_text, shift_amount, code_direction):
     for char in input_text:
         if char == ' ':
             output_text += ' '
+
+        
         if code_direction == "encode":
             target_index = alphabet.index(char) + shift_amount
             if target_index > len(alphabet) - 1:
@@ -20,7 +21,7 @@ def caesar(input_text, shift_amount, code_direction):
                 target_index = target_index + len(alphabet)
             output_text += ''.join(alphabet[target_index])
     
-    print(f"The output text is:\n{output_text}")
+    print(f"The {code_direction}d text is:\n{output_text}")
 
 # def caesar(input_text, shift_amount, code_direction):
 
