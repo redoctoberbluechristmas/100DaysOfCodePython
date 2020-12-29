@@ -33,6 +33,7 @@ while not end_of_game:
         if guess not in chosen_word:
             lives -= 1
             previous_guesses += guess
+            print(f"Your choice, {guess}, is not in the word.")
             print(f"You have {lives} lives left")
 
         print(hangman_art.stages[lives])
