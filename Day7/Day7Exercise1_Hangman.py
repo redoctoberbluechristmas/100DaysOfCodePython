@@ -1,11 +1,11 @@
 import random
-import hangman_art
-import hangman_wordlist
+from hangman_art import logo, stages
+from hangman_wordlist import word_list
 
 
-print(hangman_art.logo)
+print(logo)
 
-chosen_word = list(random.choice(hangman_wordlist.word_list))
+chosen_word = list(random.choice(word_list))
 
 blanks_list = []
 for letter in chosen_word:
@@ -37,7 +37,7 @@ while not end_of_game:
             print(f"Your choice, {guess}, is not in the word.\nSo far, you have chosen: {', '.join(previous_guesses)}")
             print(f"You have {lives} lives left")
 
-        print(hangman_art.stages[lives])
+        print(stages[lives])
 
         # blanks_list_string = ""
 
