@@ -1,4 +1,5 @@
 import random
+import os
 from hangman_art import logo, stages
 from hangman_wordlist import word_list
 
@@ -21,6 +22,8 @@ end_of_game = False
 
 while not end_of_game:
     guess = input("Please guess a letter. ").lower()
+
+    os.system('cls')
 
     if guess in previous_guesses:
         print(f"You already chose that.\nSo far, you have chosen: {', '.join(previous_guesses)}.")
