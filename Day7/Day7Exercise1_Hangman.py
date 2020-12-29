@@ -1,64 +1,11 @@
 import random
+import Day7Exercise1_asciiart
+import Day7Exercise1_wordlist
 
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
 
-word_list = ["aardvark", "baboon", "camel"]
-chosen_word = list(random.choice(word_list))
+print(Day7Exercise1_asciiart.logo)
+
+chosen_word = list(random.choice(Day7Exercise1_wordlist.word_list))
 
 blanks_list = []
 for i in range(len(chosen_word)):
@@ -83,7 +30,7 @@ while not end_of_game:
         lives -= 1
         print(f"You have {lives} lives left")
 
-    print(stages[lives])
+    print(Day7Exercise1_asciiart.stages[lives])
 
     blanks_list_string = ""
 
