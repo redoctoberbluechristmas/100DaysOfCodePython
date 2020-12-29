@@ -71,13 +71,12 @@ end_of_game = False
 lives = 6
 
 while not end_of_game:
-    guess = input("Please guess a letter: ").lower()
+    guess = input("Please guess a letter. ").lower()
 
     for i in range(len(chosen_word)):
         #letter = value at chosen_word[0], letter = value at chosen_word[1], etc.
         letter = chosen_word[i]
         if letter == guess:
-            print("Match")
             blanks_list[i] = letter
 
     if guess not in chosen_word:
@@ -88,10 +87,12 @@ while not end_of_game:
 
     blanks_list_string = ""
 
-    for i in blanks_list:
-        blanks_list_string += f" {i} "
+    # for i in blanks_list:
+    #     blanks_list_string += f" {i} "
 
-    print(f"The current panel is:\n {blanks_list_string}")
+    # print(f"The current panel is:\n {blanks_list_string}")
+
+    print(f"{' '.join(blanks_list)}")
 
     if '_' not in blanks_list:
         end_of_game = True
