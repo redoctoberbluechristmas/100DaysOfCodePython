@@ -4,6 +4,7 @@ from hangman_wordlist import word_list
 
 # If you do from <> import <>, the references are less verbose.
 # so, random.choice(word_list) vs. random.choice(hangman_wordlist.word_list)
+# see https://docs.python.org/3/reference/import.html for further.
 
 print(logo)
 
