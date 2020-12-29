@@ -23,7 +23,7 @@ def prime_checker_with_var(number):
         for i in range(2, number):
             if number % i == 0:
                 prime_status = False
-        if prime_status == True:
+        if prime_status:
             print("It's a prime number.")
         else:
             print("It's not a prime number.")
