@@ -21,7 +21,8 @@ while not end_of_game:
     guess = input("Please guess a letter. ").lower()
 
     if guess in previous_guesses:
-        print (f"You already chose that.\nSo far, you have chosen: {', '.join(previous_guesses)}.\n")
+        print(f"You already chose that.\nSo far, you have chosen: {', '.join(previous_guesses)}.")
+        print(f"{' '.join(blanks_list)}")
 
     else:
         for i in range(len(chosen_word)):
@@ -33,17 +34,19 @@ while not end_of_game:
         if guess not in chosen_word:
             lives -= 1
             previous_guesses += guess
-            print(f"Your choice, {guess}, is not in the word.")
+            print(f"Your choice, {guess}, is not in the word.\nSo far, you have chosen: {', '.join(previous_guesses)}")
             print(f"You have {lives} lives left")
 
         print(hangman_art.stages[lives])
 
-        blanks_list_string = ""
+        # blanks_list_string = ""
 
-        for i in blanks_list:
-            blanks_list_string += f" {i} "
+        # for i in blanks_list:
+        #     blanks_list_string += f" {i} "
 
-        print(f"The current panel is:\n {blanks_list_string}")
+        # print(f"The current panel is:\n {blanks_list_string}")
+
+        print(f"The current panel is:\n {' '.join(blanks_list) }")
 
         if '_' not in blanks_list:
             end_of_game = True
