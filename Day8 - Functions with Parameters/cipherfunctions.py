@@ -9,8 +9,8 @@ def encrypt(plain_text, cipher_shift):
             cipher_text += ' '
         else:
             target_index = alphabet.index(char) + cipher_shift
-            if target_index > 25:
-                target_index = target_index - 26
+            if target_index > len(alphabet) - 1:
+                target_index = target_index - len(alphabet)
             cipher_text += ''.join(alphabet[target_index])
     
     print(f"The encoded text is:\n{cipher_text}")
@@ -25,7 +25,14 @@ def decrypt(cipher_text, reverse_shift):
         else:
             target_index = alphabet.index(char) - reverse_shift
             if target_index < 0:
-                target_index = target_index + 26
+                target_index = target_index + len(alphabet)
             plain_text += ''.join(alphabet[target_index])
 
     print(f"The plain text is:\n{plain_text}")
+
+def caesar(input_text, shift_amount, code_direction):
+
+    if code_direction == "encode":
+        encrypt(plain_text=input_text, cipher_shift=shift_amount)
+    else:
+        decrypt(cipher_text=input_text, reverse_shift=shift_amount)
