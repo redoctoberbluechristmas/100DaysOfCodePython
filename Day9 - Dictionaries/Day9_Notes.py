@@ -81,6 +81,29 @@ travel_log = {
     }
 }
 
+## Accessing values in nested dictionaries.
+
+order = {
+    "starter": {
+        1: "Salad",
+        2: "Soup"
+    },
+    "main": {
+        1: ["Burger", "Fries"],
+        2: ["Spaghetti", "Steak"]
+    },
+    "dessert": {
+        1: ["Ice Cream", "Pie"],
+        2: []
+    }
+}
+
+#To access "Steak"
+# order is top-level dictionary, str "main" is a key, and also a dict. int 2 a key for "main", and the value of 2 is a list. 2, being a list
+# takes indexes, so an index of 1 will retrieve steak.
+print(order["main"][2][1])
+print(order("dessert")[1][1])
+
 # Nesting a dictionary inside a list
 # Instead of one dictionary, travel_log is a list. Each entry in the list is a dictionary, representing a country.
 

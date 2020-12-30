@@ -15,3 +15,12 @@ See Day8Exercise2 on PrimeNumberChecker for example.
 
 Make sure to reference the variable before the loop, to initialize it, and after the loop, so that your 
 assignment is actually used somewhere.
+
+
+
+
+# Useful modules/functions
+
+
+##  from os import system  system('clear') or system('cls')
+
