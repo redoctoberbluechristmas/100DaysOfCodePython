@@ -34,7 +34,9 @@ travel_log = [
 
 def add_new_country(travel_country, number_visits, travel_cities):
 
+    # Keys in the dictionary to be added.
     country_keys = ["country", "visits", "cities"]
+    # Values for the keys, passed in from the function.
     new_country_param = [travel_country, number_visits, travel_cities]
 
     new_country_dictionary = {}
