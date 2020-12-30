@@ -4,8 +4,8 @@ from art import logo
 
 print(logo)
 
-end_of_game = False
-while not end_of_game:
+should_continue = True
+while should_continue:
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
     text = input("Type your message:\n").lower()
     shift = int(input("Type the shift number:\n"))
@@ -17,4 +17,4 @@ while not end_of_game:
     
     if will_continue != "yes":
         print("Goodbye")
-        end_of_game = True
+        should_continue = False
