@@ -26,8 +26,10 @@ while not end_auction:
     more_bidders = input("Are there any other bidders? Type 'yes' or 'no'.\n")
     if more_bidders != 'yes':
 
-        top_bid = max(bid_log_dict["bid amounts"])
-        top_bidder = bid_log_dict["bidders"][bid_log_dict["bid amounts"].index(max(bid_log_dict["bid amounts"]))]
+        bid_amounts_list = bid_log_dict["bid amounts"]
+        top_bid = max(bid_amounts_list)
+        max_bid_index = bid_amounts_list.index(top_bid)
+        top_bidder = bid_log_dict["bidders"][max_bid_index]
         #print(index(max(bid_log_dict["bid amounts"])))
         # index(max(bid_log_dict["bid amounts"])
 
