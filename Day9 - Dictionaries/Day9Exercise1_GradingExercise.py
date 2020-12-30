@@ -9,14 +9,16 @@ student_scores = {
 student_grades = {}
 
 for name in student_scores:
-    if student_scores[name] > 90:
-        grade_value = "Outstanding"
-    elif student_scores[name] > 80:
-        grade_value = "Exceeds Expectations"
-    elif student_scores[name] > 70:
-        grade_value = "Acceptable"
+    # Adding this as a variable to reduce the calls to dictionary in the conditional logic.
+    # Removing "grade_value" variable because it is unnecessary.
+    score = student_scores[name]
+    if score > 90:
+        student_grades[name] = "Outstanding"
+    elif score > 80:
+        student_grades[name] = "Exceeds Expectations"
+    elif score > 70:
+        student_grades[name] = "Acceptable"
     else:
-        grade_value = "Fail"
-    student_grades[name] = grade_value
+        student_grades[name] = "Fail"
 
 print(student_grades)
