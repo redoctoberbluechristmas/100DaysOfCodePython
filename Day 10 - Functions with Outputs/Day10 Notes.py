@@ -4,6 +4,7 @@
 # l_name = input("What is your last name? ")
 
 def format_name(first_name, last_name):
+    """Take a first and last name and format it to return the title case version of the name."""
     if first_name == "" or last_name == "":
         return "Sorry, can't do it."
     
@@ -33,3 +34,10 @@ output =                      len                            ( "Hello" )
 #Multiple return values
 
 # return tells function that this is the end of function.
+
+
+# Docstrings
+
+# Create documentation as going along - intellisense.
+
+def
