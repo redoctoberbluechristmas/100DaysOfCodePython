@@ -40,4 +40,18 @@ output =                      len                            ( "Hello" )
 
 # Create documentation as going along - intellisense.
 
-def
+# def
+
+
+
+# What would you predict to be the result of running the following code?
+
+# def outer_function(a, b):
+#     def inner_function(c, d):
+#         return c + d
+#     return inner_function(a, b)
+ 
+# result = outer_function(5, 10)
+# print(result)
+
+#Apparent, c inherits a and d inherits b because of positioning?
