@@ -1,5 +1,6 @@
 
 import random
+from os import system
 from logo import logo
 
 def check_guess(user_guess, TARGET_NUMBER, attempts_remaining):
@@ -40,4 +41,6 @@ def game():
             break
         print(f"You have {attempts_remaining} attempts remaining.")
 
-game()
+while input("Do you want to play a guessing game? Type 'y' or 'n': ") == 'y':
+    system("clear")
+    game()
