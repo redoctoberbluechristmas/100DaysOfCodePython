@@ -13,11 +13,10 @@ def check_inventory(drink_type):
 
 
 def count_change():
-    quarter_value = int(input("How many quarters?: ")) * 0.25
-    dimes_value = int(input("How many dimes?: ")) * 0.10
-    nickels_value = int(input("How many nickels?: ")) * 0.05
-    pennies_value = int(input("How many pennies?: ")) * 0.01
-    total_change = quarter_value + dimes_value + nickels_value + pennies_value
+    total_change = int(input("How many quarters?: ")) * 0.25
+    total_change += int(input("How many dimes?: ")) * 0.10
+    total_change += int(input("How many nickels?: ")) * 0.05
+    total_change += int(input("How many pennies?: ")) * 0.01
     return total_change
 
 
