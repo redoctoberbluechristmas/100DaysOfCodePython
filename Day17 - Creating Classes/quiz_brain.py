@@ -7,6 +7,7 @@
 
 class QuizBrain:
     def __init__(self, q_list):
+        # The attributes are like object-specific variables that you want to keep track of. You can use these in methods.
         self.question_number = 0   # Start at zero, because all quizzes will start at question 0. This attribute will
         # track which question a user is currently on; will be used to go through question_list.
         self.question_list = q_list   # List of questions, which will be passed over to QuizBrain object when
