@@ -17,11 +17,15 @@ for question in question_data:
     question_answer = question["answer"]
     # Create the object to add to list.
     new_question = Question(question_text, question_answer)
+    # question_bank becomes a list of Question objects.
     question_bank.append(new_question)
 
 # Referencing the attribute, text, for the object at index 0 of our list, question_bank.
 # print(question_bank[0].text)
 
-quiz_brain = QuizBrain(question_bank)
+quiz = QuizBrain(question_bank)
 
-quiz_brain.next_question()
+while quiz.still_has_questions():
+    quiz.next_question()
+    print(f"Your score is {quiz.score}/{quiz.question_number}")
+
