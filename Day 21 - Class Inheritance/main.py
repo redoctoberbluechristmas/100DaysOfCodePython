@@ -1,3 +1,6 @@
+
+# Inheriting and modifying existing classes allows us to modify without reinventing the wheel.add
+
 class Animal:
     def __init__(self):
         self.num_eyes = 2
