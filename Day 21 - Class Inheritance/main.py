@@ -13,7 +13,7 @@ class Fish(Animal):
         super().__init__()      # The call to super() in the initializer is recommended, but not strictly required.
 
     def breathe(self):
-        # Modify an inherited method.
+        # Extend an inherited method. Running this will produce "Inhale, exhale" \n "doing this underwater." Wont' totally override the method.
         super().breathe()
         print("doing this underwater.")
 
