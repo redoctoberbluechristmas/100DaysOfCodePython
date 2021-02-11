@@ -10,7 +10,7 @@ class Animal:
 
 class Fish(Animal):
     def __init__(self):
-        super().__init__()
+        super().__init__()      # The call to super() in the initializer is recommended, but not strictly required.
 
     def breathe(self):
         # Modify an inherited method.
