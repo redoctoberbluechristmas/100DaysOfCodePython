@@ -16,4 +16,9 @@ class Fish(Animal):
 
 nemo = Fish()
 nemo.swim()
+
+# Inherit methods.
 nemo.breathe()
+
+# Inherit attributes.
+print(nemo.num_eyes)
