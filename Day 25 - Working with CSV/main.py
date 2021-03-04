@@ -20,7 +20,7 @@ import pandas
 
 
 
-data = pandas.read_csv("weather_data.csv")
+#data = pandas.read_csv("weather_data.csv")
 # print(type(data))   # returns pandas.core.frame.DataFrame (a DataFrame object)
 # # Two primary data structures of pandas; Series (1-dimensional) and DataFrame (2-dimensional)
 # print(type(data["temp"])) # returns pandas.core.series.Series; similare to a list
@@ -74,12 +74,80 @@ data = pandas.read_csv("weather_data.csv")
 
 
 
-data_dict = {
-    "students": ["Amy", "James", "Angela"],
-    "scores": [76, 56, 65]
-}
+#data_dict = {
+#    "students": ["Amy", "James", "Angela"],
+#    "scores": [76, 56, 65]
+#}
 # Create a dataframe from scratch (not reading from csv)
-data = pandas.DataFrame(data_dict)
+#data = pandas.DataFrame(data_dict)
 
 # port dict to csv file.
-data.to_csv("new_data.csv")
+#data.to_csv("new_data.csv")
+
+
+
+#################################################
+#          SQUIRREL CENSUS                      #
+#################################################
+
+# How many gray, black, and cinnamon squirrels?
+
+# 0. Get pandas
+import pandas
+
+# 1. Get ahold of data.
+squirrel_data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+
+# 2. Convert CSV into DataFrame.
+squirrel_data = pandas.DataFrame(squirrel_data)
+
+# 3. Get "Primary Fur Color" series.
+
+items = squirrel_data["Primary Fur Color"]
+
+# 4. Count the unique values in the series.
+num_unique_colors = items.value_counts()
+
+# 5. Output data to csv.
+num_unique_colors.to_csv("output.csv")
+
+#################################################
+#         END SQUIRREL CENSUS                   #
+#################################################
+
+#################################################
+#          SQUIRREL CENSUS 2                    #
+#################################################
+
+# How many gray, black, and cinnamon squirrels?
+
+# 0. Get pandas
+import pandas
+
+# 1. Get ahold of data.
+data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+
+# 2. Find color counts
+gray_squirrel_count = len(data[data["Primary Fur Color"] == "Gray"])
+red_squirrel_count = len(data[data["Primary Fur Color"] == "Cinnamon"])
+black_squirrel_count = len(data[data["Primary Fur Color"] == "Black"])
+
+
+# 3. Store color counts in dictionary
+
+data_dict = {
+    "Fur Color": ["Gray", "Cinnamon", "Black"],
+    "Count": [gray_squirrel_count, red_squirrel_count, black_squirrel_count]
+}
+
+# 4. Convert dictionary to DataFrame
+
+df = pandas.DataFrame(data_dict)
+
+# 5. Output DataFrame to CSV
+
+df.to_csv("output2.csv")
+
+#################################################
+#         END SQUIRREL CENSUS                   #
+#################################################
