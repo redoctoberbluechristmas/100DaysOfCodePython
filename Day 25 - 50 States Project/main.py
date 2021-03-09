@@ -45,12 +45,17 @@ while len(guessed_states) < 50:
     # Try saving each state as an "object" in a class called state, inheriting from Turtle. Pass X, Y coords.
 
     if answer_state == "Exit":
-        missing_states = []
-        for state in all_states:
-            if state not in guessed_states:
-                missing_states.append(state)
+        # missing_states = []
+        # for state in all_states:
+        #     if state not in guessed_states:
+        #         missing_states.append(state)
+        # missing states = [new_item for item in all_states if test]
+        missing_states = [state for state in all_states if state not in guessed_states]
         new_data = pandas.DataFrame(missing_states)
         new_data.to_csv("states_to_learn.csv")
+
+
+        missing states = [     state in all_states if state not in guessed_states]
 
         break
 
