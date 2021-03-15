@@ -66,4 +66,49 @@ print(result)
 
 
 
+# Dictionary comprehension
+
+# List to dictionary
+
+names = ['Alex', 'Beth', 'Caroline', 'Dave', 'Eleanor', "Freddie"]
+
+
+# Get values from two lists and pass into dictionary.
+names = ['Alex', 'Beth', 'Caroline', 'Dave', 'Eleanor', "Freddie"]
+scores = [79, 97, 70, 82, 96, 55]
+
+student_scores = {student:scores[names.index(student)] for student in names}
+
+# Get values from dictionary, pass into different dictionary.
+
+passed_students = {new_key:new_value for (key, value) in dictionary.itens() if test}
+passed_students = {student:score for (student, score) in student_scores.item() if score > 59}
+
+
+
+# Coding Exercise: Add sentence and length of its words to a dictionary
+
+sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
+# Don't change code above 👆
+
+# Write your code below:
+
+def convert(some_string):
+    return (some_string.split())
+
+sentence = convert(sentence)
+
+result = {word:len(word) for word in sentence}
+
+print(result)
+
+
+# OR
+
+# Coding Exercise: Add sentence and length of its words to a dictionary
+
+sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
+# Don't change code above 👆
+
+result = {word:len(word) for word in sentence.split()}
 
