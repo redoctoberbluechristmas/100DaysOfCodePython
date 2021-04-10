@@ -13,14 +13,7 @@ print(data_dict)
 
 user_input = input("Enter a word.").upper() # User should get a list of NATO alphabet equivalents.
 # Use a list comprehension to check elements of word against keys in dictionary.
-# for each letter in user_input, look-up its value in data_dict and output that to input_list.
+# for each letter in user_input, look-up its value in data_dict and output that to output_list.
 
-input_list = [data_dict[letter] for letter in user_input]
-print(input_list)
-
-# I am able to use "letter" because "letter" is the dictionary key.
-#for letter in user_input:
- #   print(data_dict[letter])
-
-
-#result = [ ]
+output_list = [data_dict[letter] for letter in user_input]
+print(output_list)
