@@ -10,7 +10,7 @@ request_parameters = {
     "type": QUESTION_TYPE,
 }
 
-response = requests.get(f"https://opentdb.com/api.php", params=request_parameters)
+response = requests.get("https://opentdb.com/api.php", params=request_parameters)
 response.raise_for_status()
 data = response.json()
 
