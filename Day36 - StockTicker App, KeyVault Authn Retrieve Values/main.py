@@ -1,18 +1,13 @@
 ﻿import os
 import requests
 from twilio.rest import Client
-from azure.identity import ClientSecretCredential
+from azure.identity import DefaultAzureCredential
 from azure.keyvault.secrets import SecretClient
 
 #KeyVault authentication using environment variables.
-#TODO: Find KV authentication alternative to ClientSecretCredential. Tried DefaultClientCredential, no dice, try again?
 
-tenant_id = os.environ.get('TENANT_ID')
-client_id = os.environ.get('CLIENT_ID')
-client_secret = os.environ.get('CLIENT_SECRET')
 keyvault_url = os.environ.get('KEYVAULT_URL')
-
-credential = ClientSecretCredential(tenant_id, client_id, client_secret)
+credential = DefaultAzureCredential()
 client = SecretClient(keyvault_url, credential)
 
 
