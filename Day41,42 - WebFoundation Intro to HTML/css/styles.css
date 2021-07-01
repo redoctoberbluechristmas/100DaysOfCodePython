@@ -1,0 +1,36 @@
+body {
+    background-color: #6699CC;
+}
+
+h1 {
+    color: #E5E0CC;
+}
+
+h3 {
+    color: #E5E0CC;
+}
+
+hr {
+    background-color: #6699CC;
+    border-style: none;
+    border-top-style: dotted;
+    border-top-width: 10px;
+    border-color: #E5E0CC;
+    width: 30%;
+}
+
+li {
+    color: #E5E0CC;
+}
+
+p {
+    color: #E5E0CC;
+}
+
+td {
+    color: #E5E0CC;
+}
+
+th {
+    color: #E5E0CC;
+}
