@@ -1,0 +1,30 @@
+
+/******************************** Tag Selectors ********************************************/
+h1 {
+    color: red;
+    font-size: 200px;
+}
+
+/*
+img {
+    background-color: red;
+} */
+
+/******************************** Class Selectors ********************************************/
+
+.bacon {
+    background-color: green;
+}
+
+.broccoli {
+    background-color: red;
+}
+
+
+/******************************** Id Selectors ********************************************/
+/* You can only have a single instance of an "id" selector in a page, so 1 heading. Class selectors can be used
+multiple times. Use id to identify elements where only a single one of them. Class you can group related elements.*/
+
+#heading {
+    color: blue;
+}
